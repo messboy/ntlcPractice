@@ -11,6 +11,11 @@ namespace NTCL
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.10.2.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/MultiDatesPicker").Include(
+                        "~/Scripts/MultiDatesPicker v1.6.3/js/jquery-2.1.1.js",
+                        "~/Scripts/MultiDatesPicker v1.6.3/js/jquery-ui-1.11.1.js",
+                        "~/Scripts/MultiDatesPicker v1.6.3/jquery-ui.multidatespicker"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -25,7 +30,13 @@ namespace NTCL
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Scripts/MultiDatesPicker v1.6.3/css/mdp.css",
+                      "~/Scripts/MultiDatesPicker v1.6.3/css/prettify.css"));
+
+            bundles.Add(new StyleBundle("~/Content/datespickercss").Include(
+                      "~/Scripts/MultiDatesPicker v1.6.3/css/mdp.css",
+                      "~/Scripts/MultiDatesPicker v1.6.3/css/prettify.css"));
 
             // 將 EnableOptimizations 設為 false 以進行偵錯。如需詳細資訊，
             // 請造訪 http://go.microsoft.com/fwlink/?LinkId=301862

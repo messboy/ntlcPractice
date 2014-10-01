@@ -1,5 +1,39 @@
 ﻿
 
+@Styles.Render("~/Content/datespickercss")
+@section scripts{
+    <script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+    <script src="~/Scripts/MultiDatesPicker v1.6.3/jquery-ui.multidatespicker.js"></script>
+    <script type="text/javascript">
+        var today = new Date();
+        var y = today.getFullYear();
+        $('#full-year').multiDatesPicker({
+            addDates: ['10/14/' + y, '02/19/' + y, '01/14/' + y, '11/16/' + y],
+            numberOfMonths: [3, 4],
+            defaultDate: '1/1/' + y
+        });
+
+        $(function() {
+            $('.btn-danger').click(function() {
+                var dates = getdate();
+                $.each(dates, function (i, val) {
+                    console.log(val);
+                });
+                
+            });
+        });
+
+        function getdate()
+        {
+            var dates = $('#simpliest-usage').multiDatesPicker('getDates');
+            return dates;
+        }
+
+    </script>
+    
+    
+}
+
 <h2>活動資訊看版</h2><hr />
 
 <!-- Nav tabs -->
@@ -96,6 +130,7 @@
                 <br /><br />
                 <div>
                     <label class="col-sm-2 control-label">本月休館日</label>
+                    <p>Date: <div id="full-year"></div></p>
                 </div>
                 <br /><br />
                 <a href="#" class="btn btn-danger btn-sm "><b>.</b> Save </a>
@@ -126,3 +161,5 @@
             </div>
         </div>
     </div>
+
+

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NTCL.Controllers
+namespace NTCL.Controllers.InfoBox
 {
-    public class InfoBoxController : Controller
+    public class StickyNoteMessageController : Controller
     {
-        // GET: InfoBox
+        // GET: StickyNoteMessage
         public ActionResult Index()
         {
             return View();

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>便利貼留言板</h2><hr />
+
+<div class="container">
+    <div class="row col-md-12 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5 pull-right">
+                    <div class="input-group">
+                        <a href="#" class="btn btn-primary btn-sm "><b>+</b> Add new </a>
+                        <div class="input-group-btn search-panel">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span id="search_concept">Filter by</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">帳號</a></li>
+                                <li><a href="#">姓名</a></li>
+                                <li><a href="#">e-mail</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Anything</a></li>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input type="text" class="form-control" name="x" placeholder="Search term...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-striped custab">
+
+            <thead>
+                <tr>
+                    <th>名字</th>
+                    <th>留言內容</th>
+                    <th>字體</th>
+                    <th>便利貼樣式</th>
+                    <th>表情圖片</th>
+                    <th>更新日期</th>
+                    <th>保存狀態</th>
+                    <th>啟用狀態</th>
+                    <th class="text-center">狀態</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>小強</td>
+                <td width="400px">今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好今天天氣很好</td>
+                <td>細明體</td>
+                <td>紅</td>
+                <td><img src="#" alt="Alternate Text" /></td>
+                <td>2014/10/01</td>
+                <td>永久</td>
+                <td>V</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 取消保留</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+            <tr>
+                <td>小強</td>
+                <td>今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷今天天氣很好唷唷</td>
+                <td>細明體</td>
+                <td>紅</td>
+                <td><img src="#" alt="Alternate Text" /></td>
+                <td>2014/10/01</td>
+                <td>一般</td>
+                <td>V</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 永久保留</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+            <tr>
+                <td>小強</td>
+                <td>今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿今天天氣很好阿</td>
+                <td>細明體</td>
+                <td>紅</td>
+                <td><img src="#" alt="Alternate Text" /></td>
+                <td>2014/10/01</td>
+                <td>永久</td>
+                <td>V</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> 取消保留</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
