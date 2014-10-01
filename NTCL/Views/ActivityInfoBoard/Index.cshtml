@@ -14,32 +14,70 @@
     <div class="tab-pane active" id="PlayList">
         <div class="container">
             <div class="row col-md-12 custyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-5 pull-right">
+                            <div class="input-group">
+                                <a href="#" class="btn btn-primary btn-sm "><b>+</b> Add new </a>
+                                <div class="input-group-btn search-panel">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span id="search_concept">Filter by</span> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">帳號</a></li>
+                                        <li><a href="#">姓名</a></li>
+                                        <li><a href="#">e-mail</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Anything</a></li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="search_param" value="all" id="search_param">
+                                <input type="text" class="form-control" name="x" placeholder="Search term...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <table class="table table-striped custab">
                     <thead>
-                        <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new</a>
                         <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Parent ID</th>
+                            <th>海報圖</th>
+                            <th>名稱</th>
+                            <th>類別</th>
+                            <th>展示時間</th>
+                            <th>播放比重</th>
+                            <th>啟用狀態</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tr>
-                        <td>1</td>
+                        <td><img src="#" alt="Alternate Text" /></td>
                         <td>海報1</td>
-                        <td>News Cate</td>
+                        <td>活動</td>
+                        <td>永久</td>
+                        <td>1</td>
+                        <td>V</td>
                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td><img src="#" alt="Alternate Text" /></td>
                         <td>海報2</td>
-                        <td>Main Products</td>
+                        <td>活動</td>
+                        <td>永久</td>
+                        <td>1</td>
+                        <td>V</td>
                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </tr>
                     <tr>
-                        <td>3</td>
+                        <td><img src="#" alt="Alternate Text" /></td>
                         <td>海報3</td>
-                        <td>Parent Blogs</td>
+                        <td>活動</td>
+                        <td>永久</td>
+                        <td>1</td>
+                        <td>V</td>
                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </tr>
                 </table>
@@ -47,15 +85,44 @@
         </div>
     </div>
     <div class="tab-pane" id="Declaration">
-        <div>
-            <span>今日開館</span>&emsp;
-            @Html.RadioButton("今日開館", true, true) 是
-            @Html.RadioButton("今日開館", false, false) 否
+        <div class="container">
+            <br /><br />
+            <form class="form-inline" role="form">
+                <div>
+                    <label class="col-sm-2 control-label" >今日開館(@(DateTime.Now.ToShortDateString()))</label>&emsp;
+                    @Html.RadioButton("今日開館", true, true) 是
+                    @Html.RadioButton("今日開館", false, false) 否
+                </div>
+                <br /><br />
+                <div>
+                    <label class="col-sm-2 control-label">本月休館日</label>
+                </div>
+                <br /><br />
+                <a href="#" class="btn btn-danger btn-sm "><b>.</b> Save </a>
+            </form>
         </div>
-        <div>
-            <span>本月休館日</span>
-        </div>
-
     </div>
-    <div class="tab-pane" id="ScrollingText">...</div>
-</div>
+        <div class="tab-pane" id="ScrollingText">
+            <div class="container">
+                <br /><br />
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="card-holder-name">跑馬燈文字</label>
+                            <div class="col-sm-10">
+                                @Html.TextArea("name", "臺北市立圖書館景美分館特別於9月28日及10月5日下午1時30分至4時30分安排了「扶桑花女孩」及「放牛班的春天」兩部與教育有關的影片，並邀請專業影評人劉英台老師進行導賞解說。歡迎大手牽小手，一起來欣賞這兩部動人的影片，同時也讓我們為辛勞的教師致上最高的敬意。凡親子共同參加者，即贈送小禮物1份。更多詳細資訊歡迎查詢臺北市立圖書館網頁"
+                            , new { @class = "form-control", placeholder = "文字設定", rows = 16, cols = 15 })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="button" class="btn btn-success">Update</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>

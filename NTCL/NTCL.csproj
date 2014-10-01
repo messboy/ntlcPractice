@@ -112,10 +112,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActivityInfoBoardController.cs" />
+    <Compile Include="Controllers\ActivityInfoDeviceController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfoBoxController.cs" />
-    <Compile Include="Controllers\MultimediaController.cs" />
+    <Compile Include="Controllers\PostCastDeviceController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -199,8 +200,9 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\ActivityInfoBoard\Index.cshtml" />
     <Content Include="Views\InfoBox\Index.cshtml" />
-    <Content Include="Views\Multimedia\Index.cshtml" />
     <Content Include="Views\Statistics\Index.cshtml" />
+    <Content Include="Views\ActivityInfoDevice\Index.cshtml" />
+    <Content Include="Views\PostCastDevice\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,16 +6,12 @@ using System.Web.Mvc;
 
 namespace NTCL.Controllers
 {
-    public class MultimediaController : Controller
+    public class PostCastDeviceController : Controller
     {
-        // GET: Multimedia
+        // GET: PostCastDevice
         public ActionResult Index()
         {
             return View();
         }
-
-        //活動看版控制
-
-        //推播裝置控制
     }
 }
